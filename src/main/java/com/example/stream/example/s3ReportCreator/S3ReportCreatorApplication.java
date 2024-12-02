@@ -3,6 +3,7 @@ package com.example.stream.example.s3ReportCreator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.integration.IntegrationMessageHeaderAccessor;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
@@ -14,6 +15,7 @@ import java.util.Objects;
 import java.util.function.Function;
 
 @SpringBootApplication
+@ComponentScan("org.springframework.cloud.fn.aggregator")
 public class S3ReportCreatorApplication {
 
 	public static void main(String[] args) {
